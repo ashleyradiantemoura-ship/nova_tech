@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Editar chamado</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-card">
+
+        <div class="form-header">
+            <h2>HelpDesk Industrial</h2>
+            <h3>Editar chamado</h3>
+            <p>Informe o código do chamado que deseja editar.</p>
+        </div>
+
+        <form action="editar.php" method="GET">
+
+            <div class="input-group">
+
+                <label for="id">Código do chamado:</label>
+
+                <input
+                    type="number"
+                    id="id"
+                    name="id"
+                    required
+                    placeholder="Digite o código"
+                >
+
+            </div>
+
+            <div class="button-group">
+
+                <button type="submit" class="btn-submit">
+                    Editar
+                </button>
+
+                <a href="index.html">
+                    <button type="button" class="btn-link">
+                        Voltar
+                    </button>
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

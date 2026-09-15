@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lista de Chamados</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-card">
+
+        <div class="form-header">
+            <h2>Lista de Chamados</h2>
+            <h3>HelpDesk Industrial</h3>
+            <p>Consulte e gerencie os chamados registrados</p>
+        </div>
+
+        <!-- PESQUISA -->
+        <form action="listar.php" method="GET">
+
+            <div class="input-group">
+
+                <label for="titulo">Buscar por título:</label>
+
+                <input
+                    type="text"
+                    id="titulo"
+                    name="titulo"
+                    placeholder="Digite o título do chamado"
+                >
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="status">Status:</label>
+
+                <select id="status" name="status">
+
+                    <option value="Todos">Todos</option>
+                    <option value="Aberto">Aberto</option>
+                    <option value="Em atendimento">Em atendimento</option>
+                    <option value="Finalizado">Finalizado</option>
+
+                </select>
+
+            </div>
+
+            <div class="button-group">
+
+                <button type="submit" class="btn-submit">
+                    Buscar
+                </button>
+
+            </div>
+
+        </form>
+
+        <!-- TABELA -->
+        <div class="tabela-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Título</th>
+                        <th>Solicitante</th>
+                        <th>Setor</th>
+                        <th>Prioridade</th>
+                        <th>Status</th>
+                        <th>Data</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <!--
+                    Os chamados serão
+                    carregados pelo listar.php
+                    -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- BOTÕES -->
+        <div class="button-group">
+
+            <a href="cadastrar.html">
+                <button type="button" class="btn-submit">
+                    Cadastrar chamado
+                </button>
+            </a>
+
+            <a href="index.html">
+                <button type="button" class="btn-link">
+                    Voltar
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

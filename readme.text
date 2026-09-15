@@ -1,0 +1,49 @@
+Nome da equipe:
+Loop Trio
+
+Integrantes:
+  - Ana Júlia Leopoldino
+  -Ashley Radiante
+  -Gabriella Yanes
+
+
+
+CONFIGURAÇÃO DA CONEXÃO
+
+O sistema utiliza PHP e MySQL.
+
+Servidor: localhost
+Usuário: root
+Senha:
+Banco de dados: helpdesk_industrial
+
+A conexão com o banco de dados está configurada no arquivo conexao.php.
+
+
+IMPORTAÇÃO DO BANCO
+
+1. Abrir o XAMPP.
+2. Iniciar o Apache e o MySQL.
+3. Acessar o phpMyAdmin.
+4. Criar o banco de dados "helpdesk_industrial".
+5. Selecionar o banco de dados criado.
+6. Clicar em "Importar".
+7. Selecionar o arquivo chamados.sql.
+8. Executar a importação.
+
+
+EXECUÇÃO DA APLICAÇÃO
+
+1. Colocar a pasta do projeto em:
+C:\xampp\htdocs\devexperience
+
+2. Iniciar o Apache e o MySQL no XAMPP.
+3. Abrir o navegador.
+4. Acessar:
+http://localhost/devexperience/
+
+
+FUNCIONALIDADES PENDENTES
+
+- [Colocar aqui as funcionalidades que ainda não foram concluídas.]
+- [Colocar aqui outras funcionalidades pendentes.]

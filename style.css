@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #B9D9EB;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Card Principal */
+.form-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-header h2 {
+    color: #1d3557;
+    font-size: 1.8rem;
+}
+
+.form-header h3 {
+    color: #457b9d;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Mensagens de Alerta (PHP) */
+.alerta {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.alerta.sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alerta.erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Campos do Formulário */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #457b9d;
+}
+
+/* Botões */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group a {
+    text-decoration: none;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit {
+    background-color: #98cceb;
+    color: #ffffff;
+}
+
+.btn-submit:hover {
+    background-color: #80c5ed;
+}
+
+.btn-link {
+    background-color: #61bcf0;
+    color: #ffffff;
+}
+
+.btn-link:hover {
+    background-color: #42adea;
+}
+
+/* Responsividade */
+@media (max-width: 375px) {
+    body {
+        padding: 10px;
+    }
+
+    .form-card {
+        padding: 18px 15px;
+        border-radius: 8px;
+    }
+
+    .form-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-header h3 {
+        font-size: 1rem;
+    }
+
+    .form-header p {
+        font-size: 0.8rem;
+    }
+
+    .input-group label {
+        font-size: 0.85rem;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+.list-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #98cceb;
+    color: white;
+}
+
+td {
+    color: #444;
+}
+/* Responsividade - 375px */
+@media (max-width: 375px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .list-card {
+        padding: 18px 15px;
+        border-radius: 8px;
+    }
+
+    .form-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-header h3 {
+        font-size: 1rem;
+    }
+
+    .form-header p {
+        font-size: 0.8rem;
+    }
+
+    .input-group label {
+        font-size: 0.85rem;
+    }
+
+    .input-group input,
+    .input-group select {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Tabela */
+    .tabela-container {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 20px;
+    }
+
+    table {
+        min-width: 900px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+}
