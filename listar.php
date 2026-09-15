@@ -37,6 +37,53 @@ $resultado = $stmt->get_result();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Chamados</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .acoes-container {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .btn-acao {
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-acao-ver {
+            background-color: #61bcf0;
+            color: #ffffff;
+        }
+
+        .btn-acao-ver:hover {
+            background-color: #42adea;
+        }
+
+        .btn-acao-editar {
+            background-color: #98cceb;
+            color: #ffffff;
+        }
+
+        .btn-acao-editar:hover {
+            background-color: #80c5ed;
+        }
+
+        .btn-acao-excluir {
+            background-color: #e63946;
+            color: #ffffff;
+        }
+
+        .btn-acao-excluir:hover {
+            background-color: #d62828;
+        }
+    </style>
 </head>
 <body>
     <div class="list-card">
@@ -90,12 +137,14 @@ $resultado = $stmt->get_result();
                                 <td><?= $chamado["status"] ?></td>
                                 <td><?= date("d/m/Y H:i", strtotime($chamado["data_abertura"])) ?></td>
                                 <td>
-                                    <a href="visualizar.php?id=<?= $chamado["id"] ?>">Ver</a> |
-                                    <a href="editar.php?id=<?= $chamado["id"] ?>">Editar</a> |
-                                    <form action="excluir.php" method="POST" style="display:inline;" onsubmit="return confirm('Deseja excluir?');">
-                                        <input type="hidden" name="id" value="<?= $chamado["id"] ?>">
-                                        <button type="submit" style="background:none; border:none; color:red; cursor:pointer;">Excluir</button>
-                                    </form>
+                                    <div class="acoes-container">
+                                        <a href="visualizar.php?id=<?= $chamado["id"] ?>" class="btn-acao btn-acao-ver">Ver</a>
+                                        <a href="editar.php?id=<?= $chamado["id"] ?>" class="btn-acao btn-acao-editar">Editar</a>
+                                        <form action="excluir.php" method="POST" style="display:inline;" onsubmit="return confirm('Deseja excluir este chamado?');">
+                                            <input type="hidden" name="id" value="<?= $chamado["id"] ?>">
+                                            <button type="submit" class="btn-acao btn-acao-excluir">Excluir</button>
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                         <?php endwhile; ?>
