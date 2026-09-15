@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS helpdesk;
+USE helpdesk;
+
+CREATE TABLE IF NOT EXISTS chamados (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    solicitante VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    setor VARCHAR(50) NOT NULL,
+    titulo VARCHAR(150) NOT NULL,
+    descricao TEXT NOT NULL,
+    prioridade VARCHAR(20) NOT NULL,
+    status VARCHAR(30) DEFAULT 'Aberto',
+    data_abertura TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

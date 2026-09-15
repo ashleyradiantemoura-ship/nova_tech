@@ -1,13 +1,12 @@
 <?php
-$servidor = "localhost";
-$usuario = "root"; 
+$host = "localhost";
+$usuario = "root";
 $senha = "";
-$banco = "helpdesk_industrial"; 
+$banco = "helpdesk";
 
-$conexao = new mysqli($sevidor, $usuario, $usuario, $banco); 
+$conexao = new mysqli($host, $usuario, $senha, $banco);
 
-if ($conexao-> connect_error) {
-    die("Erro na conexão:" . $conexao->connect_error);
+if ($conexao->connect_error) {
+    die("Falha na conexão: " . $conexao->connect_error);
 }
-
-?> 
+?>
